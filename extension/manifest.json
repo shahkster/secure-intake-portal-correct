@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Legacy Comfort Dialer",
+  "version": "1.1.0",
+  "description": "Presses Call in Google Voice when you dial a lead from the Legacy Comfort CRM, and keeps it to one Voice tab.",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://voice.google.com/*"
+      ],
+      "js": [
+        "autodial.js"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "icons": {
+    "128": "icon-128.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "storage"
+  ]
+}
